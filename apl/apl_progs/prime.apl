@@ -13,6 +13,7 @@ integer prime(integer n)
 		k=n%f;
 		if(k==0) then
 			l=0;
+			break;
 		else
 			f=f-1;
 		endif;

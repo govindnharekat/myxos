@@ -31,7 +31,7 @@ integer main()
 			b=b-1;
 		else 
 			b=b-1;
-		endif
+		endif;
 	endwhile;
 	return 0;
 }	
