@@ -1,4 +1,4 @@
-load(17,1);
+load(7,1);
 load(8,2);
 load(23,17);
 load(24,18);
@@ -28,5 +28,12 @@ SP = 3 * 512;
 
 [28 * 512] = 0; // Set up the IP value for INIT in the stack
 
+// Load Interrupt 1 Routine from disk to memory 
+
+load (11, 5);
+load (12, 6);
+
+load (9, 3);
+load (10, 4);
 ireturn;
 
