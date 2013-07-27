@@ -1,4 +1,4 @@
-sample.dat
+evennos.xsm
 512
 24
 

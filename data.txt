@@ -1,337 +1,327 @@
-ikola Tesla (Se
-rbian Cyrillic:
- Никола �
-�есла; 10 J
-uly 1856 – 7 
-January 1943) w
-as a Serbian-bo
-rn American[2][
-3] inventor, el
-ectrical engine
-er, mechanical 
-engineer, physi
-cist, and futur
-ist best known 
-for his contrib
-utions to the d
-esign of the mo
-dern alternatin
-g current (AC) 
-electricity sup
-ply system.[4]
+START
 
-Tesla gained ex
-perience in tel
-ephony and elec
-trical engineer
-ing before emig
-rating to the U
-nited States in
- 1884 to work f
-or Thomas Ediso
-n. He soon stru
-ck out on his o
-wn with financi
-al backers, set
-ting up laborat
-ories and compa
-nies to develop
- a range of ele
-ctrical devices
-. His patented 
-AC induction mo
-tor and transfo
-rmer were licen
-sed by George W
-estinghouse, wh
-o also hired Te
-sla as a consul
-tant to help de
-velop a power s
-ystem using alt
-ernating curren
-t. Tesla is als
-o known for his
- high-voltage, 
-high-frequency 
-power experimen
-ts in New York 
-and Colorado Sp
-rings which inc
-luded patented 
-devices and the
-oretical work u
-sed in the inve
-ntion of radio 
-communication,[
-5] for his X-ra
-y experiments, 
-and for his ill
--fated attempt 
-at intercontine
-ntal wireless t
-ransmission in 
-his unfinished 
-Wardenclyffe To
-wer project.[6]
+MOV SP,
+1535
+MOV BP,
+1535
+PUSH R0
 
+JMP 00010
 
-Tesla's achieve
-ments and his a
-bilities as a s
-howman demonstr
-ating his seemi
-ngly miraculous
- inventions mad
-e him world-fam
-ous.[7] Althoug
-h he made a gre
-at deal of mone
-y from his pate
-nts, he spent a
- lot on numerou
-s experiments. 
-He lived for mo
-st of his life 
-in a series of 
-New York hotels
- although the e
-nd of his paten
-t income and ev
-entual bankrupt
-cy led him to l
-ive in diminish
-ed circumstance
-s.[8] Tesla sti
-ll continued to
- invite the pre
-ss to parties h
-e held on his b
-irthday to anno
-unce new invent
-ions he was wor
-king and make (
-sometimes unusu
-al) statements.
-[9][10] Because
- of his pronoun
-cements and the
- nature of his 
-work over the y
-ears, Tesla gai
-ned a reputatio
-n in popular cu
-lture as the ar
-chetypal "mad s
-cientist".[11] 
-He died in room
- 3327 of the Ne
-w Yorker Hotel 
-on 7 January 19
-43.
+PUSH BP
 
-Tesla's work fe
-ll into relativ
-e obscurity aft
-er his death, b
-ut since the 19
-90s, his reputa
-tion has experi
-enced a comebac
-k in popular cu
-lture.[12] His 
-work and repute
-d inventions ar
-e also at the c
-enter of many c
-onspiracy theor
-ies and have al
-so been used to
- support variou
-s pseudoscience
-s, UFO theories
- and New Age oc
-cultism. In 196
-0, in honor of 
-Tesla, the Gene
-ral Conference 
-on Weights and 
-Measures for th
-e International
- System of Unit
-s dedicated the
- term "tesla" t
-o the SI unit m
-easure for magn
-etic field stre
-ngth.
+MOV BP,SP
+
+PUSH R0
+
+MOV R0,
+1
+MOV R1,
+BP
+ADD R0,
+R1
+MOV R1,
+20
+MOV [R0],
+R1
+MOV R0,
+1
+MOV R1,
+BP
+ADD R0,
+R1
+MOV R0,
+[R0]
+MOV R1,
+0
+GT R0,
+R1
+JZ R0,
+00112
+MOV R0,
+1
+MOV R1,
+BP
+ADD R0,
+R1
+MOV R0,
+[R0]
+MOV R1,
+2
+MOD R0,
+R1
+MOV R1,
+0
+EQ R0,
+R1
+JZ R0,
+00090
+MOV R0,
+1
+MOV R1,
+BP
+ADD R0,
+R1
+MOV R0,
+[R0]
+OUT R0
+
+MOV R0,
+1
+MOV R1,
+BP
+ADD R0,
+R1
+MOV R1,
+1
+MOV R2,
+BP
+ADD R1,
+R2
+MOV R1,
+[R1]
+MOV R2,
+1
+SUB R1,
+R2
+MOV [R0],
+R1
+JMP 00110
+
+MOV R0,
+1
+MOV R1,
+BP
+ADD R0,
+R1
+MOV R1,
+1
+MOV R2,
+BP
+ADD R1,
+R2
+MOV R1,
+[R1]
+MOV R2,
+1
+SUB R1,
+R2
+MOV [R0],
+R1
+JMP 26
+
+MOV R0,
+10
+PUSH R0
+
+INT 7
+
+INT 7
 
 
 
-ikola Tesla was
- born on 10 Jul
-y (O.S. 28 June
-) 1856 to Serbi
-an parents in t
-he village of S
-miljan, Austria
-n Empire (moder
-n-day Croatia).
- His father, Mi
-lutin Tesla, wa
-s a Serbian Ort
-hodox priest.[1
-5] Tesla's moth
-er, Đuka Tesla
- (née Mandić)
-, whose father 
-was also a Serb
-ian Orthodox pr
-iest,[16] had a
- talent for mak
-ing home craft 
-tools, mechanic
-al appliances, 
-and the ability
- to memorize Se
-rbian epic poem
-s. Duka had nev
-er received a f
-ormal education
-. Nikola credit
-ed his eidetic 
-memory and crea
-tive abilities 
-to his mother's
- genetics and i
-nfluence.[17][1
-8] Tesla's prog
-enitors were fr
-om western Serb
-ia, near Monten
-egro.[19]
 
-Tesla was the f
-ourth of five c
-hildren. He had
- an older broth
-er named Dane a
-nd three sister
-s, Milka, Angel
-ina and Marica.
- Dane was kille
-d in a horse-ri
-ding accident w
-hen Nikola was 
-five.[20][21] S
-ome accounts sa
-y that Tesla ca
-used the accide
-nt by frighteni
-ng the horse.[2
-1] In 1861, Tes
-la attended the
- "Lower" or "Pr
-imary" School i
-n Smiljan where
- he studied Ger
-man, arithmetic
-, and religion.
-[22] In 1862, t
-he Tesla family
- moved to Gospi
-ć, Austrian Em
-pire, where Tes
-la's father wor
-ked as a pastor
-. Nikola comple
-ted "Lower" or 
-"Primary" Schoo
-l, followed by 
-the "Lower Real
- Gymnasium" or 
-"Normal School"
-.[23]
 
-In 1870, Tesla 
-moved to Karlov
-ac to attend sc
-hool at Higher 
-Real Gymnasium,
- where he was p
-rofoundly influ
-enced by a math
- teacher Martin
- Sekulić.[21][
-24] Tesla was a
-ble to perform 
-integral calcul
-us in his head,
- which prompted
- his teachers t
-o believe that 
-he was cheating
-.[25] He finish
-ed a four-year 
-term in three y
-ears, graduatin
-g in 1873.[26]
 
-In 1873, Tesla 
-returned to his
- birthtown, Smi
-ljan. Shortly a
-fter he arrived
-, Tesla contrac
-ted cholera; he
- was bedridden 
-for nine months
- and was near d
-eath multiple t
-imes. Tesla's f
-ather, in a mom
-ent of despair,
- promised to se
-nd him to the b
-est engineering
- school if he r
-ecovered from t
-he illness[21][
-27] (his father
- had originally
- wanted him to 
-enter the pries
-thood).[28]
 
-In 1874, Tesla 
-evaded being dr
-afted into the 
-Austro-Hungaria
-n Army in Smilj
-an[29] by runni
-ng away to Tomi
-ngaj, near Gra�
-�ac. There, he 
-explored the mo
-untains in hunt
-er's garb. Tesl
-a claimed that 
-this contact wi
-th nature made 
-him stronger, b
-oth physically 
-and mentally.[2
-1] He read many
- books while in
- Tomingaj, and 
-later claimed t
-hat Mark Twain'
-s works had hel
-ped him to mira
-culously recove
-r from his earl
-ier illness.[27
-]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
