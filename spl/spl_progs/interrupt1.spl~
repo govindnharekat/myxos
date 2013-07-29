@@ -1,0 +1,79 @@
+alias physicalSP S0;
+physicalSP = ([PTBR + 2 * (SP / 512)] * 512) + (SP % 512);
+
+alias sysCallNo S1;
+alias filename S2;
+
+sysCallNo = physicalSP - 1;
+filename = physicalSP-3;
+
+alias free S3;
+alias i S4;
+alias returnvalue S5;
+returnvalue = physicalSP - 1;
+alias freeblock S6;
+
+if (sysCallNo == 1) then
+	i = 0;
+	free = -1;
+	while (i <= 447) do
+		if ([DISK_LIST + i] == 0) then
+			free = i;
+			break;
+		endif;
+		i = i + 1;
+	endwhile;
+
+	if (free == -1) then
+		[returnvalue] = -1;
+		ireturn;
+	endif;
+	
+	i = 0;
+	while (i <= 511) do
+		if ([FAT + i] == filename) then
+			[returnvalue] = 0;
+			ireturn;
+		endif;
+		i = i + 8;
+	endwhile;
+
+	i = 2;
+	freeblock = -1;	
+	while (i <= 511) do
+		if ([FAT + i] == -1) then
+			freeblock = i-2;		
+			break;		
+		endif;
+		i = i + 8;
+	endwhile;				 
+	
+	if (freeblock == -1) then
+		[returnvalue] = -1;
+		ireturn;
+	endif;
+
+	[FAT + freeblock] = filename;
+	[FAT + freeblock + 1] = 0;
+	[FAT + freeblock + 2] = free;
+
+	load(1,free);
+
+	i = 0;
+	while (i <= 511) do
+		[SCRATCHPAD + i] = -1;
+		i = i + 1;	
+	endwhile;
+	
+	store(1,free);
+	
+	[DISK_LIST + free] = 1;
+	
+	store(5,19);
+	store(6,20);
+
+	[returnvalue] = 0;
+	ireturn;
+
+endif;
+
