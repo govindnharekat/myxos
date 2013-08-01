@@ -9,6 +9,7 @@ currentPCB = READY_LIST + 32 * currentPID;
 [ currentPCB + 2 ] = BP;
 [ currentPCB + 3 ] = SP - 1; 
 
+print currentPID;
 
 alias physicalSP S2;
 physicalSP = ([PTBR + 2 * (SP / 512)] * 512) + (SP % 512); 
@@ -17,8 +18,6 @@ physicalSP = ([PTBR + 2 * (SP / 512)] * 512) + (SP % 512);
 
 [ currentPCB + 5 ] = PTBR;
 [ currentPCB + 6 ] = PTLR ; 
-
-
 [ currentPCB + 7 ] = R0;
 [ currentPCB + 8 ] = R1;
 [ currentPCB + 9 ] = R2;
@@ -29,13 +28,44 @@ physicalSP = ([PTBR + 2 * (SP / 512)] * 512) + (SP % 512);
 [ currentPCB + 14 ] = R7;
 
 
+alias var S3;
+alias newPCB S4;
+
+var=currentPCB + 32;
+
+while (var != currentPCB) do
+	if ([var + 1] == 1) then
+		newPCB = var;
+		break;
+	endif;
+	if (var == (READY_LIST + 32 * 31)) then
+		var = READY_LIST;
+	else
+		var = var + 32;
+
+	endif;
+endwhile;
+BP = [ newPCB + 2 ];
+SP = [ newPCB + 3 ];
+PTBR = [ newPCB + 5 ];
+PTLR = [ newPCB + 6 ];
+R0 = [ newPCB + 7 ];
+R1 = [ newPCB + 8 ];
+R2 = [ newPCB + 9 ];
+R3 = [ newPCB + 10 ];
+R4 = [ newPCB + 11 ];
+R5 = [ newPCB + 12 ];
+R6 = [ newPCB + 13];
+R7 = [ newPCB + 14];
 
 
 SP = SP + 1;
+
 alias newphysicalSP S2;
 newphysicalSP = ([PTBR + 2 * (SP / 512)] * 512) + (SP % 512);
-[ newphysicalSP ] = [ newPCB + 4 ]; // Stores IP field value of PCB on the stack 
+[ newphysicalSP ] = [ newPCB + 4 ];
 
-[ currentPCB + 1 ] = 2; // Set STATE to READY
+[ newPCB + 1 ] = 2; // Set STATE to READY
+
 
 ireturn;

@@ -9,8 +9,8 @@ filename = [physicalSP-3];
 
 alias free S3;
 alias i S4;
-alias returnvalue S5;
-returnvalue = [physicalSP - 2];
+//alias returnvalue S5;
+//returnvalue = physicalSP - 2;
 alias freeblock S6;
 
 if (sysCallNo == 1) then
@@ -25,14 +25,14 @@ if (sysCallNo == 1) then
 	endwhile;
 
 	if (free == -1) then
-		returnvalue = -1;
+		[physicalSP-2] = -1;
 		ireturn;
 	endif;
 	
 	i = 0;
 	while (i <= 511) do
 		if ([FAT + i] == filename) then
-			returnvalue = 0;
+			[physicalSP-2] = 0;
 			ireturn;
 		endif;
 		i = i + 8;
@@ -49,7 +49,7 @@ if (sysCallNo == 1) then
 	endwhile;				 
 	
 	if (freeblock == -1) then
-		returnvalue = -1;
+		[physicalSP-2] = -1;
 		ireturn;
 	endif;
 
@@ -72,7 +72,7 @@ if (sysCallNo == 1) then
 	store(5,19);
 	store(6,20);
 
-	returnvalue = 0;
+	[physicalSP-2] = 0;
 	ireturn;
 
 endif;
