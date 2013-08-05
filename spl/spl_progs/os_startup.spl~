@@ -32,8 +32,11 @@ SP = 3 * 512;
 load (11, 5);
 load (12, 6);
 
-load (9, 3);
-load (10, 4);
+load (5,19);
+load (6,20);
+
+//load (9, 3);
+//load (10, 4);
 
 ireturn;
 

@@ -29,29 +29,13 @@ SP = 3 * 512;
 
 [28 * 512] = 0; 		// Set up the IP value for INIT in the stack
 
+load (11, 5);
+load (12, 6);
 
-load (5,19);			//loads FAT table from disk to memory
-load (6,20);			//loads Disk Free List from Disk to Memory
+load (5,19);
+load (6,20);
 
-load (11, 5);			//loads Interrupt Routine 1
-load (12, 6);			//loads Interrupt Routine 1
-
-alias counter S0;			
-counter = 0;
-while ( counter <  128) do			// 64 entries, each of size 2 words
-	[ FILE_TABLE + counter + 0] = -1;	// Set FAT Index to -1
-	[ FILE_TABLE + counter + 1] =  0;	// Set File Open Count to 0
-	counter = counter + 2;			// Move to next entry
-endwhile;	
-
-counter = 0;
-while (counter < 256) do
-	[PAGE_TABLE + counter] = -1;
-	[PAGE_TABLE + counter + 1] = -1;
-	counter = counter + 2;
-endwhile;
-load (9, 3);			//loads TIMER Interrupt Routine
-load (10, 4);			//loads TIMER Interrupt Routine
+//load (9, 3);
+//load (10, 4);
 
 ireturn;
-

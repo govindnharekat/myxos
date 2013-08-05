@@ -4,7 +4,7 @@ enddecl
 
 integer main()
 {
-	status = Create("myfile.dat");
+	status = Open("myfile.dat");
 	print(status);
 	return 0;
 }
